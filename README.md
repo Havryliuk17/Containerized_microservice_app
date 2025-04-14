@@ -23,7 +23,7 @@ This project demonstrates containerization of two FastAPI-based microservices us
 
 ## Task 1 – Single Containerized App (Client Service)
 
-The **Client Service** is a simple FastAPI app exposing endpoints like `/` and `/health`.
+A client service has endpoints such as `/` and `/health'.
 
 ### Build and Run
 
@@ -48,7 +48,6 @@ curl http://localhost:8000/health
 
 ## Task 2 – Multi-Container App with Scheduler
 
-The **Scheduler Service**  sends GET requests to the client service every 10 seconds.
 
 ### Build and Launch with Podman Compose
 

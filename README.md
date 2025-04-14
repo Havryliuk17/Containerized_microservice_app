@@ -64,8 +64,6 @@ podman-compose up --build
 podman-compose down
 ```
 
-## 📝 Notes
-
-- No external database or OpenRouter API is needed for this task.
-- The Client Service does not rely on other microservices here — its health endpoint works standalone.
+## Notes
+- The Client Service does not rely on other microservices here (as it did in the HW#2) — it has only health and default endpoints.
 

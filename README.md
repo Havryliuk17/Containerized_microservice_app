@@ -57,12 +57,6 @@ podman-compose up --build
 
 ![Logs](./images/image5.png)
 
-### Scheduler Logs
-
-
-![Logs](./images/image4.png)
-
-
 ---
 
 ## Tear Down

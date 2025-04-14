@@ -10,7 +10,6 @@ This project demonstrates containerization of two FastAPI-based microservices us
 ## 📁 Project Structure
 
 ```
-.
 ├── client_service.py            # Task 1 app: exposes health and API endpoints
 ├── scheduler_service.py         # Task 2 app: call the client service every 10 seconds
 ├── Dockerfile.client            # Dockerfile for client service
@@ -40,6 +39,7 @@ curl http://localhost:8000/
 curl http://localhost:8000/health
 ```
 
+![Logs](./images/image3.png)
 
 ---
 

@@ -7,7 +7,7 @@ This project demonstrates containerization of two FastAPI-based microservices us
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── client_service.py            # Task 1 app: exposes health and API endpoints
@@ -21,18 +21,18 @@ This project demonstrates containerization of two FastAPI-based microservices us
 
 ---
 
-## 🚀 Task 1 – Single Containerized App (Client Service)
+## Task 1 – Single Containerized App (Client Service)
 
 The **Client Service** is a simple FastAPI app exposing endpoints like `/` and `/health`.
 
-### ✅ Build and Run
+### Build and Run
 
 ```bash
 podman build -f Dockerfile.client -t hw3-client .
 podman run -d --name client -p 8000:8000 hw3-client
 ```
 
-### 🔍 Test the App
+### Test the App
 
 ```bash
 curl http://localhost:8000/
@@ -46,39 +46,31 @@ curl http://localhost:8000/health
 
 ---
 
-## 🔁 Task 2 – Multi-Container App with Scheduler
+## Task 2 – Multi-Container App with Scheduler
 
-The **Scheduler Service** is a second FastAPI app that every 10 seconds sends GET requests to the Client Service.
+The **Scheduler Service**  sends GET requests to the client service every 10 seconds.
 
-### 🛠 Build and Launch with Podman Compose
+### Build and Launch with Podman Compose
 
 ```bash
 podman-compose up --build
 ```
 
-### 📜 Scheduler Output (Logs)
+![Logs](./images/image5.png)
 
-You should see log output like:
-
-```bash
-[Scheduler] r.status_code=200 r.text[:80]='{"status":"ok"}'
-```
-
-Every 10 seconds, the scheduler will poll `http://client:8000/health`.
+### Scheduler Logs
 
 
-### 📸 Screenshot: Terminal logs from scheduler
+![Logs](./images/image4.png)
 
-> _Insert screenshot showing scheduler logs calling client_
 
 ---
 
-## 📤 Tear Down
+## Tear Down
 
 ```bash
 podman-compose down
 ```
----
 
 ## 📝 Notes
 

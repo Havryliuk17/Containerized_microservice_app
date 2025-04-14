@@ -1,6 +1,5 @@
 ## Containerization of microservice applications
 
-This project demonstrates containerization of two FastAPI-based microservices using **Podman** and **Podman Compose**:
 
 - **Task 1**: Containerize a single FastAPI application
 - **Task 2**: Create a second app that calls the first every 10 seconds and deploy both in a shared network

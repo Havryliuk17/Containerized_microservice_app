@@ -38,7 +38,10 @@ podman run -d --name client -p 8000:8000 hw3-client
 curl http://localhost:8000/
 curl http://localhost:8000/health
 ```
+![Test request](./images/image1.png)  ![Test request](./images/image2.png)
 
+
+### Check service logs
 ![Logs](./images/image3.png)
 
 ---

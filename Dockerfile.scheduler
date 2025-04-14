@@ -1,0 +1,8 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY task2_requirements.txt .
+RUN pip install --no-cache-dir -r task2_requirements.txt
+COPY scheduler_service.py .
+ENV TARGET_URL=http://client:8000/health
+EXPOSE 9000
+CMD ["uvicorn", "scheduler_service:app", "--host", "0.0.0.0", "--port", "9000"]

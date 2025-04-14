@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+# 1. create workdir
+WORKDIR /app
+
+# 2. install deps
+COPY task1_requirements.txt .
+RUN pip install --no-cache-dir -r task1_requirements.txt
+
+# 3. copy service code
+COPY client_service.py .
+
+# 4. expose FastAPI port
+EXPOSE 8000
+
+# 5. launch service
+CMD ["uvicorn", "client_service:app", "--host", "0.0.0.0", "--port", "8000"]
